@@ -1,0 +1,133 @@
+body{
+    background: skyblue;
+}
+#wrapper{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-areas: "nestedgrid nestedgrid nestedgrid"
+        "nestedgrid1 nestedgrid1 nestedgrid1"
+        "nestedgrid2 nestedgrid2 nestedgrid2"
+        "nestedgrid3 nestedgrid3 nestedgrid3 "
+        "footer footer footer";
+    background: skyblue;         
+}
+#nestedgrid{
+    grid-area: nestedgrid;
+    display: grid;
+    grid-template-areas: "name title title";   
+}
+#name{
+    grid-area: name;
+    color: dodgerblue;
+    text-align: center;
+    font-size: 70px;
+    border: 3px solid white; 
+}
+#title{
+    grid-area: title; 
+    text-align: center;
+    color: dodgerblue;
+    font-size: 75px;
+    border: 3px solid white;
+}
+#nestedgrid1{
+    grid-area: nestedgrid1;
+    display: grid;
+    grid-template-areas: "home am cm news";
+    text-align: center;
+    font-size: 35px;
+    background: white;
+}
+#home{
+    grid-area: home;
+    border: 2px solid white;
+    border-radius: 20%;
+    transition: transform .2s;
+    background: white;
+}
+#home:hover {
+  transform: scale(1.1);
+}
+#am{
+    grid-area: am;
+     border: 2px solid white;
+    border-radius: 20%;
+    transition: transform .2s;
+}
+#am:hover {
+  transform: scale(1.1);
+}
+#cm{
+    grid-area: cm;
+     border: 2px solid white;
+    border-radius: 20%;
+    transition: transform .2s;
+    background: white;
+}
+#cm:hover {
+  transform: scale(1.1);
+}
+#news{
+    grid-area: news;
+     border: 2px solid white;
+    border-radius: 20%;
+    transition: transform .2s;
+}
+#news:hover {
+  transform: scale(1.1);
+}
+#nestedgrid2{
+    grid-area: nestedgrid2;
+    display: grid;
+    grid-template-areas: "images textbox1 textbox1";
+}
+#images{
+    grid-area: images;
+    text-align: center;
+}
+#textbox1{
+    grid-area: textbox1;
+      width: 1140px;
+  height: 300px;
+  border: 20px solid skyblue; 
+  background: white;
+    font-size: 35px;
+}  
+#nestedgrid3{
+    grid-area: nestedgrid3;
+    display: grid;
+    grid-template-areas: "textbox2 textbox2 images2";
+    font-size: 35px;
+}
+#textbox2{
+    grid-area: textbox2;
+     width: 1137px;
+  height: 280px;
+  border: 20px solid skyblue; 
+    background: white; 
+    font-size: 35px;
+    text-align: center;
+}
+#images2{
+    grid-area: images2;
+    text-align: center;
+}
+#footer{
+    grid-area: footer;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    text-decoration: inherit;
+    background: white;
+}
+a{
+    text-decoration: none;
+}
+img{
+    border: 10px solid white;
+    border-radius: 20%;
+    transition: transform .2s;
+}
+img:hover {
+  transform: scale(1.2);
+}
